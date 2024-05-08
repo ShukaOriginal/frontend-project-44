@@ -1,0 +1,28 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "best proj",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShukaOriginal/frontend-project-44.git"
+  },
+  "keywords": [
+    "1"
+  ],
+  "author": "shuka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShukaOriginal/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/ShukaOriginal/frontend-project-44#readme",
+
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+
+  "type": "module"
+}
