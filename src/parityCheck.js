@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+
+
 const parityChek = (usernane) => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
