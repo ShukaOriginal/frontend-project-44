@@ -40,3 +40,5 @@ function primality(n) {
    }
 
 export default prime_game;
+
+//132
