@@ -18,8 +18,7 @@ const parityChek = (usernane) => {
         if (answer == 'yes' && parity || answer == 'no' && !parity){
             winScore = winScore + 1;
             console.log('Correct!');
-        }
-        if (answer == 'no' && parity || answer == 'yes' && !parity){
+        }else{
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer == 'yes' ? `no` : `yes`}'.`);
             console.log(`Let's try again, ${usernane}!`);
             break;
