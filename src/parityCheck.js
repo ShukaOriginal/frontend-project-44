@@ -4,6 +4,7 @@ import readlineSync from 'readline-sync';
 
 const parityChek = (usernane) => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    let winScore = 0;
 
     for (let i = 0; i < 3; i++){
         let number = Math.floor(Math.random() * 100) + 1;
@@ -14,16 +15,18 @@ const parityChek = (usernane) => {
         const answer = readlineSync.question('Your answer: ');
 
         if (answer == 'yes' && parity || answer == 'no' && !parity){
+            winScore = winScore + 1;
             console.log('Correct!');
         }
         if (answer == 'no' && parity || answer == 'yes' && !parity){
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer == 'yes' ? `no` : `yes`}'.`);
             console.log(`Let's try again, ${usernane}!`);
-            parityChek();
+            break;
         }
     }
-
-    console.log(`Congratulations, ${usernane}!`);
+    if (winScore >= 3){
+        console.log(`Congratulations, ${usernane}!`);
+    }
 }
 
 export default parityChek;

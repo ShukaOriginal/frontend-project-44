@@ -1,7 +1,7 @@
 install:
 	npm ci
 
-brain-game:
+brain-games:
 	node bin/brain-games.js
 
 publish:
