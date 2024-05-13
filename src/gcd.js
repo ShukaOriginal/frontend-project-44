@@ -5,19 +5,19 @@ const gcd_game = (usernane) => {
   let winScore = 0;
 
   for (let i = 0; i < 3; i++) {
-    let number1 = Math.floor(Math.random() * 100) + 1;
-    let number2 = Math.floor(Math.random() * 100) + 1;
+    const number1 = Math.floor(Math.random() * 100) ++;
+    const number2 = Math.floor(Math.random() * 100) ++;
     let gcd = 0;
-    for (let i = 1; i <= number1 && i <= number2; i++) {
-      if (number1 % i == 0 && number2 % i == 0) {
-        gcd = i;
+    for (let j = 1; j <= number1 && j <= number2; j++) {
+      if (number1 % j === 0 && number2 % j === 0) {
+        gcd = j;
       }
     }
     console.log(`Question: ${number1} ${number2}`);
     const answer = Number(readlineSync.question('Your answer: '));
-    if (answer == gcd) {
+    if (answer === gcd) {
       console.log('Correct!');
-      winScore = winScore + 1;
+      winScore++;
     } else {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`

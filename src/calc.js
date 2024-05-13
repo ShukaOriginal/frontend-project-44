@@ -5,27 +5,27 @@ const calc_game = (usernane) => {
   let winScore = 0;
 
   for (let i = 0; i < 3; i++) {
-    let number1 = Math.floor(Math.random() * 100) + 1;
-    let number2 = Math.floor(Math.random() * 100) + 1;
-    let sign = Math.floor(Math.random() * 10) % 3;
+    const number1 = Math.floor(Math.random() * 100) + 1;
+    const number2 = Math.floor(Math.random() * 100) + 1;
+    const sign = Math.floor(Math.random() * 10) % 3;
     let correctAnswer = 0;
     let signChar = '';
-    if (sign == 0) {
+    if (sign === 0) {
       correctAnswer = number1 + number2;
       signChar = '+';
-    } else if (sign == 1) {
+    } else if (sign === 1) {
       correctAnswer = number1 - number2;
       signChar = '-';
-    } else if (sign == 2) {
+    } else if (sign === 2) {
       correctAnswer = number1 * number2;
       signChar = '*';
     }
 
     console.log(`Question: ${number1} ${signChar} ${number2}`);
     const answer = Number(readlineSync.question('Your answer: '));
-    if (answer == correctAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
-      winScore = winScore + 1;
+      winScore++;
     } else {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
