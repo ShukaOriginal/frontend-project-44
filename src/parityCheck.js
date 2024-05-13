@@ -7,8 +7,8 @@ const parityChek = (usernane) => {
   let winScore = 0;
 
   for (let i = 0; i < 3; i++) {
-    let number = Math.floor(Math.random() * 100) + 1;
-    let parity = number % 2 == 0 ? true : false;
+    const number = Math.floor(Math.random() * 100) + 1;
+    const parity = number % 2 == 0 ? true : false;
 
     console.log(`Question: ${number}`);
 
