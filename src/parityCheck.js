@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+//sss
 
 
 const parityChek = (usernane) => {
