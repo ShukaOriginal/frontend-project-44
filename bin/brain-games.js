@@ -5,6 +5,6 @@ import ParityCheck from './../src/parityCheck.js'
 
 
 let usernane = Welcome();
-ParityCheck(usernane);
+//ParityCheck(usernane);
 
 export default usernane;
