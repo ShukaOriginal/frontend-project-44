@@ -27,18 +27,14 @@ const calcGame = (username) => {
 
   for (let i = 0; i < 3; i += 1) {
     const massiv = preparation();
-    const number1 = massiv[0];
-    const number2 = massiv[1];
-    const signChar = massiv[2];
-    const correctAnswer = massiv[3];
 
-    console.log(`Question: ${number1} ${signChar} ${number2}`);
+    console.log(`Question: ${massiv[0]} ${massiv[2]} ${massiv[1]}`);
     const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === correctAnswer) {
+    if (Number(answer) === massiv[3]) {
       console.log('Correct!');
       winScore += 1;
     } else {
-      wrongAnswerF(answer, correctAnswer, username);
+      wrongAnswerF(answer, massiv[3], username);
       return;
     }
   }
