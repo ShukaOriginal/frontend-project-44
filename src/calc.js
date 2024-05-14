@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const calc_game = (usernane) => {
+const calcGame = (usernane) => {
   console.log('What is the result of the expression?');
   let winScore = 0;
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     const number1 = Math.floor(Math.random() * 100) + 1;
     const number2 = Math.floor(Math.random() * 100) + 1;
     const sign = Math.floor(Math.random() * 10) % 3;
@@ -25,7 +25,7 @@ const calc_game = (usernane) => {
     const answer = Number(readlineSync.question('Your answer: '));
     if (answer === correctAnswer) {
       console.log('Correct!');
-      winScore++;
+      winScore += 1;
     } else {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
@@ -39,4 +39,4 @@ const calc_game = (usernane) => {
   }
 };
 
-export default calc_game;
+export default calcGame;

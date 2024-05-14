@@ -4,15 +4,15 @@ const progression = (usernane) => {
   console.log('What number is missing in the progression?');
   let winScore = 0;
 
-  for (let i = 0; i < 3; i++) {
-    var massiv = new Array(10);
-    let number1 = Math.floor(Math.random() * 100) + 1;
-    let interval = Math.floor(Math.random() * 10) + 1;
-    let empty = Math.floor(Math.random() * 10);
+  for (let i = 0; i < 3; i += 1) {
+    const massiv = new Array(10);
+    const number1 = Math.floor(Math.random() * 100) + 1;
+    const interval = Math.floor(Math.random() * 10) + 1;
+    const empty = Math.floor(Math.random() * 10);
     massiv[0] = number1;
 
-    for (let i = 1; i < massiv.length; i++) {
-      massiv[i] = massiv[i - 1] + interval;
+    for (let j = 1; j < massiv.length; j += 1) {
+      massiv[j] = massiv[j - 1] + interval;
     }
     const numberToFind = massiv[empty];
     massiv[empty] = '..';
@@ -21,9 +21,9 @@ const progression = (usernane) => {
 
     const answer = Number(readlineSync.question('Your answer: '));
 
-    if (answer == numberToFind) {
+    if (answer === numberToFind) {
       console.log('Correct!');
-      winScore = winScore + 1;
+      winScore += 1;
     } else {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${numberToFind}'.`
