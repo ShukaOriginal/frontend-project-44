@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import randInt from './randomGenerated';
+import randInt from './randomGenerated.js';
 
 const progression = (usernane) => {
   console.log('What number is missing in the progression?');
