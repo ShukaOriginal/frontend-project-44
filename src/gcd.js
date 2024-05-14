@@ -8,9 +8,9 @@ const gcdGame = (usernane) => {
     const number1 = Math.floor(Math.random() * 100) + 1;
     const number2 = Math.floor(Math.random() * 100) + 1;
     let gcd = 0;
-    for (let i = 1; i <= number1 && i <= number2; i += 1) {
-      if (number1 % i === 0 && number2 % i === 0) {
-        gcd = i;
+    for (let j = 1; j <= number1 && j <= number2; j += 1) {
+      if (number1 % j === 0 && number2 % j === 0) {
+        gcd = j;
       }
     }
     console.log(`Question: ${number1} ${number2}`);
