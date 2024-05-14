@@ -34,7 +34,7 @@ const calcGame = (username) => {
     }
   }
   if (winScore >= 3) {
-    console.log(`Congratulations, ${usernane}!`);
+    console.log(`Congratulations, ${username}!`);
   }
 };
 
