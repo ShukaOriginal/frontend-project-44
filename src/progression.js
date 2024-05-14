@@ -27,9 +27,6 @@ const progression = (usernane) => {
       console.log('Correct!');
       winScore += 1;
     } else {
-      // prettier-ignore
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${numberToFind}'.`);
-      console.log(`Let's try again, ${usernane}!`);
       wrongAnswerF(answer, numberToFind, usernane);
       return;
     }

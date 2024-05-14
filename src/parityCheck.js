@@ -18,9 +18,6 @@ const parityChek = (usernane) => {
       winScore += 1;
       console.log('Correct!');
     } else {
-      // prettier-ignore
-      //console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'.`);
-      //console.log(`Let's try again, ${usernane}!`);
       wrongAnswerF(answer, answer === 'yes' ? 'no' : 'yes', usernane);
       break;
     }

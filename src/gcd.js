@@ -21,9 +21,6 @@ const gcdGame = (username) => {
       console.log('Correct!');
       winScore += 1;
     } else {
-      // prettier-ignore
-      //console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`);
-      //console.log(`Let's try again, ${username}!`);
       wrongAnswerF(answer, gcd, username);
       return;
     }
