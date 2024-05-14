@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import randInt from './randomGenerated.js';
+import wrongAnswerF from './wrongAnswer.js';
 
 const progression = (usernane) => {
   console.log('What number is missing in the progression?');
@@ -29,6 +30,7 @@ const progression = (usernane) => {
       // prettier-ignore
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${numberToFind}'.`);
       console.log(`Let's try again, ${usernane}!`);
+      wrongAnswerF(answer, numberToFind, usernane);
       return;
     }
   }

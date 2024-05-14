@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import randInt from './randomGenerated.js';
+import wrongAnswerF from './wrongAnswer.js';
 
-const gcdGame = (usernane) => {
+const gcdGame = (username) => {
   console.log('Find the greatest common divisor of given numbers.');
   let winScore = 0;
 
@@ -21,13 +22,14 @@ const gcdGame = (usernane) => {
       winScore += 1;
     } else {
       // prettier-ignore
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`);
-      console.log(`Let's try again, ${usernane}!`);
+      //console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`);
+      //console.log(`Let's try again, ${username}!`);
+      wrongAnswerF(answer, gcd, username);
       return;
     }
   }
   if (winScore >= 3) {
-    console.log(`Congratulations, ${usernane}!`);
+    console.log(`Congratulations, ${username}!`);
   }
 };
 

@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import randInt from './randomGenerated.js';
+import wrongAnswerF from './wrongAnswer.js';
 
-const calcGame = (usernane) => {
+const calcGame = (username) => {
   console.log('What is the result of the expression?');
   let winScore = 0;
 
@@ -23,14 +24,12 @@ const calcGame = (usernane) => {
     }
 
     console.log(`Question: ${number1} ${signChar} ${number2}`);
-    const answer = Number(readlineSync.question('Your answer: '));
-    if (answer === correctAnswer) {
+    const answer = readlineSync.question('Your answer: ');
+    if (Number(answer) === correctAnswer) {
       console.log('Correct!');
       winScore += 1;
     } else {
-      // prettier-ignore
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${usernane}!`);
+      wrongAnswerF(answer, correctAnswer, username);
       return;
     }
   }

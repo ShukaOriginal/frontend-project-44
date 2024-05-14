@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import randInt from './randomGenerated.js';
+import wrongAnswerF from './wrongAnswer.js';
 
 const parityChek = (usernane) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -18,8 +19,9 @@ const parityChek = (usernane) => {
       console.log('Correct!');
     } else {
       // prettier-ignore
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'.`);
-      console.log(`Let's try again, ${usernane}!`);
+      //console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'.`);
+      //console.log(`Let's try again, ${usernane}!`);
+      wrongAnswerF(answer, answer === 'yes' ? 'no' : 'yes', usernane);
       break;
     }
   }

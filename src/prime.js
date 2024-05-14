@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import randInt from './randomGenerated.js';
+import wrongAnswerF from './wrongAnswer.js';
 
 function primality(n) {
   for (let i = 2; i < n; i += 1) {
@@ -31,8 +32,9 @@ const primeGame = (usernane) => {
       winScore += 1;
     } else {
       // prettier-ignore
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnawer}'.`);
-      console.log(`Let's try again, ${usernane}!`);
+      //console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnawer}'.`);
+      //console.log(`Let's try again, ${usernane}!`);
+      wrongAnswerF(answer, correctAnawer, usernane);
       return;
     }
   }
