@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import randInt from './randomGenerated.js';
 
 function primality(n) {
   for (let i = 2; i < n; i += 1) {
@@ -12,7 +13,7 @@ const primeGame = (usernane) => {
   let winScore = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    const number = Math.floor(Math.random() * 100) + 1;
+    const number = randInt(100);
     let correctAnawer = '';
 
     console.log(`Question: ${number}`);
