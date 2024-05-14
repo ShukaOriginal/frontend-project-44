@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import randInt from './randomGenerated';
 
 const progression = (usernane) => {
   console.log('What number is missing in the progression?');
@@ -6,9 +7,9 @@ const progression = (usernane) => {
 
   for (let i = 0; i < 3; i += 1) {
     const massiv = new Array(10);
-    const number1 = Math.floor(Math.random() * 100) + 1;
-    const interval = Math.floor(Math.random() * 10) + 1;
-    const empty = Math.floor(Math.random() * 10);
+    const number1 = randInt(100);
+    const interval = randInt(10);
+    const empty = randInt(9);
     massiv[0] = number1;
 
     for (let j = 1; j < massiv.length; j += 1) {
