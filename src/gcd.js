@@ -19,9 +19,8 @@ const gcdGame = (usernane) => {
       console.log('Correct!');
       winScore += 1;
     } else {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`
-      );
+      // prettier-ignore
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`);
       console.log(`Let's try again, ${usernane}!`);
       return;
     }
