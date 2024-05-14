@@ -6,7 +6,7 @@ const parityChek = (usernane) => {
 
   for (let i = 0; i < 3; i += 1) {
     const number = Math.floor(Math.random() * 100) + 1;
-    const parity = number % 2 === 0 ? true : false;
+    const parity = number % 2 === 0;
 
     console.log(`Question: ${number}`);
 

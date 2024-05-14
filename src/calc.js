@@ -27,9 +27,8 @@ const calcGame = (usernane) => {
       console.log('Correct!');
       winScore += 1;
     } else {
-      console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-      );
+      // prettier-ignore
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${usernane}!`);
       return;
     }
